@@ -13,6 +13,7 @@ body {
   text-align: center;
   font-family: arial;
   display: inline-block;
+  border-radius: 5px;
 }
 
 .title {
