@@ -5,10 +5,10 @@ const License = (props) => {
 
   const renderAge = () => {
     if (age < 24) {
-      return `${age} years old Junior Developer`;
+      return `${age} years old and Junior Developer`;
     }
 
-    return `${age} years old senior Developer`;
+    return `${age} years old and senior Developer`;
   };
   return (
     <div className="card">
