@@ -23,5 +23,5 @@ body {
 
 .card:hover {
   transition: all 0.7s ease-out;
-  background-color: aqua;
+  background-color: rgb(67, 201, 235);
 }
