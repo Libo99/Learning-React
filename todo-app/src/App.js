@@ -1,27 +1,16 @@
 import React from "react";
-import DateTime from './Datetime' ;
-
-
+import Form from './Components/Form'
 
 
 function App() {
-  const element = (
-    <div>
-      <h1>hello world</h1>
-    </div>
-  );
-
   return (
     <div className="App">
-    {element}
-    <DateTime/>
-    </div>
-
-  )
+      <header>
+        <h1>Todos</h1>
+      </header>
+        <Form/>
+      </div>
+  );
 }
 
 export default App;
-
-
-
-
