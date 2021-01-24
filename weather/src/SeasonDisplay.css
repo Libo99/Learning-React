@@ -1,0 +1,32 @@
+.icon-left{
+position: absolute;
+top: 10px;
+left: 10px;
+}
+
+.icon-right{
+position: absolute;
+bottom: 10px;
+right: 10px;
+}
+.winter i {
+    color: blue;
+}
+.summer i {
+    color: red;
+}
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.winter{
+    background-color: lightblue;
+    overflow: hidden;
+}
+.summer{
+    background-color: orangered;
+    overflow: hidden;
+}
