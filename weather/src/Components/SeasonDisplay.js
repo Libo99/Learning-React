@@ -34,6 +34,7 @@ const SeasonDisplay = (props) => {
   const season = getSeason(props.lat, new Date().getMonth());
   console.log(season);
   const {text, iconName} = SeasonConfig[season];
+  console.log(SeasonConfig);
   
   
   return (
