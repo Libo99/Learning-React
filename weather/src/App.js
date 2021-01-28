@@ -1,5 +1,6 @@
 import React from "react";
 import SeasonDisplay from './Components/SeasonDisplay';
+import Loader from "./Components/Loader";
 
 class App extends React.Component {
 //   constructor(props) {
@@ -30,7 +31,9 @@ class App extends React.Component {
       return <SeasonDisplay lat={this.state.lat}/>;
     }
 
-    return <h1>Loading...</h1>;
+    return (
+      <Loader/>
+    );
   }
 }
 
