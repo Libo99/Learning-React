@@ -9,6 +9,10 @@ const {text} = props;
         <div className="ui big text loader">{text}</div>
       </div>
     );
+};
+
+Loader.defaultProps = {
+  text: 'Loading....'
 }
 
 

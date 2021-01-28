@@ -1,20 +1,20 @@
 import React from "react";
-import SeasonDisplay from './Components/SeasonDisplay';
+import SeasonDisplay from "./Components/SeasonDisplay";
 import Loader from "./Components/Loader";
 
 class App extends React.Component {
-//   constructor(props) {
-//     super(props);
+  //   constructor(props) {
+  //     super(props);
 
-//     this.state = { lat: null, errorMessage: "" };
-//   }
-    state = {lat: null, errorMessage: ''}
+  //     this.state = { lat: null, errorMessage: "" };
+  //   }
+  state = { lat: null, errorMessage: "" };
 
   componentDidMount() {
     console.log("component is mounted");
     window.navigator.geolocation.getCurrentPosition(
-      position => this.setState({ lat: position.coords.latitude }),
-      err => this.setState({ errorMessage: err.message })
+      (position) => this.setState({ lat: position.coords.latitude }),
+      (err) => this.setState({ errorMessage: err.message })
     );
   }
 
@@ -22,18 +22,24 @@ class App extends React.Component {
     console.log("component is updated");
   }
 
-  render() {
+  renderbody() {
     if (this.state.errorMessage && !this.state.lat) {
       return <h1>Error: {this.state.errorMessage}</h1>;
     }
 
     if (this.state.lat && !this.state.errorMessage) {
-      return <SeasonDisplay lat={this.state.lat}/>;
+      return <SeasonDisplay lat={this.state.lat} />;
     }
 
-    return (
-      <Loader text="Loading..."/>
-    );
+    return <Loader text="Please allow location request" />;
+  }
+
+  render() {
+    return(
+     <div className="border red">
+       {this.renderbody()}
+     </div>
+    )
   }
 }
 
