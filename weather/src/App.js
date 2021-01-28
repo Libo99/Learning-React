@@ -32,7 +32,7 @@ class App extends React.Component {
     }
 
     return (
-      <Loader/>
+      <Loader text="Loading..."/>
     );
   }
 }
