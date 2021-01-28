@@ -22,7 +22,7 @@ class App extends React.Component {
     console.log("component is updated");
   }
 
-  renderbody() {
+  renderContent() {
     if (this.state.errorMessage && !this.state.lat) {
       return <h1>Error: {this.state.errorMessage}</h1>;
     }
@@ -35,11 +35,7 @@ class App extends React.Component {
   }
 
   render() {
-    return(
-     <div className="border red">
-       {this.renderbody()}
-     </div>
-    )
+    return <div className="border red">{this.renderContent()}</div>;
   }
 }
 
