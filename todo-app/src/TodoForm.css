@@ -1,5 +1,33 @@
-body{
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+  padding: 0;
 }
 
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.form {
+  background-color: rgb(61, 61, 61);
+  height: 350px;
+  width: 300px;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px black;
+}
+h2 {
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* top: 30%; */
+  /* position: relative; */
+}
