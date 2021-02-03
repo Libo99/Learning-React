@@ -8,7 +8,6 @@ const [todo, setTodo] = useState('');
 const [todos, setTodos] = useState([]);
 
 const Addtodo = (e) => {
-e.preventDefault();
 setTodos([ ...todos,
     {
     id: todos.length,
@@ -17,11 +16,16 @@ setTodos([ ...todos,
 }])
 }
 
+const OnSubmit = (e) => {
+e.preventDefault();
+    setTodo("");
+}
+
     return(
         <div className="container">
             <div className="form-container">
                 <h2>Add a todo to the list</h2>
-                <form>
+                <form onSubmit={OnSubmit}>
                     <label htmlFor="todo">Todo</label>
                     <input type="text" name="todo" id="todo" value={todo} onChange={e => setTodo(e.target.value)}/>
                     <button onClick={Addtodo}>Add Todo</button>
