@@ -9,6 +9,7 @@ body{
     align-items: center;
     justify-content: right;
     right: 20%;
+    top: 25%;
     position: absolute;
     flex-direction: column;
     
