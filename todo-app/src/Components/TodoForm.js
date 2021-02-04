@@ -19,17 +19,19 @@ setTodos([ ...todos,
 
 const OnSubmit = (e) => {
 e.preventDefault();
+if(!todo) return;
+    Addtodo();
     setTodo("");
 }
 
-const IsCompleted = todoId => {
-    const completedTodo = todos.map(todo => {
-        return todoId === todo.id ? {completed: !todo.completed} : todo;
+// const IsCompleted = todoId => {
+//     const completedTodo = todos.map(todo => {
+//         return todoId === todo.id ? {completed: !todo.completed} : todo;
         
         
-    });
-    setTodo(completedTodo);
-}
+//     });
+//     setTodo(completedTodo);
+// }
 
     return(
         <div className="container">
@@ -38,7 +40,7 @@ const IsCompleted = todoId => {
                 <form onSubmit={OnSubmit}>
                     <label htmlFor="todo">Todo</label>
                     <input type="text" name="todo" id="todo" value={todo} onChange={e => setTodo(e.target.value)}/>
-                    <button onClick={Addtodo}>Add Todo</button>
+                    <button>Add Todo</button>
                 </form>
             </div>
             <TodoList Todos={todos}/>
