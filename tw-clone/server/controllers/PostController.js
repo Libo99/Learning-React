@@ -16,7 +16,7 @@ exports.CreatePost = (req, res) => {
     post.save()
     .then(data => res.status(201).json({
         message: data
-    }))
+    })).catch(err => console.log(err));
     
 }
 

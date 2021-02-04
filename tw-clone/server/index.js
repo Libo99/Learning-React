@@ -23,6 +23,7 @@ db.once("open", function () {
 app.use(cors());
 app.use(helmet());
 app.use(morgan('common'));
+app.use(express.json());
 
 
 app.get('/', (req, res) => {
