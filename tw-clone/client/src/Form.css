@@ -15,4 +15,7 @@ form{
     font-size: 2rem;
     margin-bottom: 30px;
 }
+textarea{
+    resize: none;
+}
 
