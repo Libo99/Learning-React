@@ -10,8 +10,9 @@ const {Todos} = props;
         <div className="list">
             <h2 className="list-header">List of todos</h2>
             <ul>
-                {Todos.map(todo => <li key={todo.id}>{todo.text}</li>)}
+                {Todos.map(todo => <li key={todo.id}>Todo: {todo.text}</li>)}
             </ul>
+            
         </div>
     )
 

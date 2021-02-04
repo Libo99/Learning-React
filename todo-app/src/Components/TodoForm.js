@@ -7,11 +7,12 @@ const TodoForm = () => {
 const [todo, setTodo] = useState('');
 const [todos, setTodos] = useState([]);
 
-const Addtodo = (e) => {
+const Addtodo = () => {
 setTodos([ ...todos,
     {
     id: todos.length,
     text: todo,
+    completed: false
 
 }])
 }
