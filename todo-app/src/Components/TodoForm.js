@@ -22,6 +22,15 @@ e.preventDefault();
     setTodo("");
 }
 
+const IsCompleted = todoId => {
+    const completedTodo = todos.map(todo => {
+        return todoId === todo.id ? {completed: !todo.completed} : todo;
+        
+        
+    });
+    setTodo(completedTodo);
+}
+
     return(
         <div className="container">
             <div className="form-container">
