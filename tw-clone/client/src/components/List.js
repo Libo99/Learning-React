@@ -15,12 +15,6 @@ const List = () => {
     fetchApi();
   }, []);
 
-  if (!post)
-    return (
-      <div>
-        loadiiiing
-      </div>
-    );
     
 
   return (
