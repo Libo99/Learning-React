@@ -15,8 +15,6 @@ const List = () => {
     fetchApi();
   }, []);
 
-    
-
   return (
     <div className="container">
       <ul>
