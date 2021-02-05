@@ -11,7 +11,7 @@ const Form = () => {
     name: name,
     text: text,
   };
-  const url = "http://localhost:8205/post";
+  const url = "https://obscure-retreat-25663.herokuapp.com/posts";
 
   const Addpost = async() => {
     await Axios.post(url, Post).then((post) => console.log(post));

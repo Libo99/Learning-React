@@ -6,7 +6,7 @@ const List = () => {
 
   useEffect(() => {
     const fetchApi = async () => {
-      const url = "http://localhost:8205/post";
+      const url = "https://obscure-retreat-25663.herokuapp.com/posts";
 
       const response = await fetch(url);
       const data = await response.json();
