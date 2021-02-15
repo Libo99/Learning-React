@@ -1,16 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../Form.css";
 import Axios from "axios";
+import List from "./List";
+import Loading from "./LoadingSpinner";
 
 const Form = () => {
+  const [post, setPost] = useState([]);
   const [name, setName] = useState("");
   const [text, setText] = useState("");
+  const url = "https://obscure-retreat-25663.herokuapp.com/posts";
+
+  const [loading, setLoading] = useState(true);
+
+  const fetchApi = async () => {
+    const response = await fetch(url);
+    const data = await response.json();
+    setPost(data);
+    setLoading(false);
+  };
+  useEffect(() => {
+    fetchApi();
+  }, []);
 
   const Post = {
     name: name,
     text: text,
   };
-  const url = "https://obscure-retreat-25663.herokuapp.com/posts";
 
   const Addpost = async () => {
     await Axios.post(url, Post).then((post) => console.log(post));
@@ -21,6 +36,10 @@ const Form = () => {
     Addpost();
     setName("");
     setText("");
+    setLoading(true);
+    setTimeout(() => {
+      fetchApi();
+    }, 500);
   };
 
   return (
@@ -53,6 +72,7 @@ const Form = () => {
           <button className="button-primary">Send</button>
         </form>
       </div>
+      {loading ? <Loading /> : <List post={post} />}
     </div>
   );
 };
