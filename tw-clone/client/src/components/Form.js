@@ -13,16 +13,15 @@ const Form = () => {
   };
   const url = "https://obscure-retreat-25663.herokuapp.com/posts";
 
-  const Addpost = async() => {
+  const Addpost = async () => {
     await Axios.post(url, Post).then((post) => console.log(post));
   };
-  
+
   const OnSubmit = (e) => {
     e.preventDefault();
     Addpost();
     setName("");
     setText("");
-    
   };
 
   return (
@@ -55,7 +54,7 @@ const Form = () => {
           <button className="button-primary">Send</button>
         </form>
       </div>
-      <List className="list"/>
+      <List className="list" />
     </div>
   );
 };

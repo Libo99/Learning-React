@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "../List.css";
+import Loading from './LoadingSpinner';
 
 const List = () => {
   const [post, setPost] = useState([]);
+  const [loading, setLoading ] = useState(true);
 
   useEffect(() => {
     const fetchApi = async () => {
@@ -13,10 +15,13 @@ const List = () => {
       setPost(data);
     };
     fetchApi();
+    setLoading(false);
   }, []);
 
+  
   return (
     <div className="container">
+      {loading ? <Loading/> : 
       <ul>
         {post
           .map((post, index) => (
@@ -30,6 +35,7 @@ const List = () => {
           ))
           .reverse()}
       </ul>
+    }
     </div>
   );
 };
