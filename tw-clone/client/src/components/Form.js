@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../Form.css";
 import Axios from "axios";
-import List from "./List";
 
 const Form = () => {
   const [name, setName] = useState("");
@@ -54,7 +53,6 @@ const Form = () => {
           <button className="button-primary">Send</button>
         </form>
       </div>
-      <List className="list" />
     </div>
   );
 };

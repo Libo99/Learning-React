@@ -11,7 +11,7 @@ exports.CreatePost = (req, res) => {
     const post = new Post({
         name: req.body.name.toString().trim(),
         text: req.body.text.toString().trim(),
-        created: Date.now()
+        created: new Date
     })
     post.save()
     .then(data => res.status(201).json({

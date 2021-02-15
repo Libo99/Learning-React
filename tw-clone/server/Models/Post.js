@@ -5,12 +5,12 @@ const PostSchema = new Schema({
 
     name: {
         type: String,
-        required: true
+        required: [true, 'Name is required']
     },
 
     text:{
         type: String,
-        required: true
+        required: [true, 'Text is required']
     },
     created: Date
 
