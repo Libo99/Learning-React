@@ -3,12 +3,14 @@ import "../Form.css";
 import Axios from "axios";
 import List from "./List";
 import Loading from "./LoadingSpinner";
+require('dotenv').config();
 
 const Form = () => {
   const [post, setPost] = useState([]);
   const [name, setName] = useState("");
   const [text, setText] = useState("");
-  const url = "https://obscure-retreat-25663.herokuapp.com/posts";
+  const {REACT_APP_API_URL} = process.env;
+  const url = REACT_APP_API_URL;
 
   const [loading, setLoading] = useState(true);
 
