@@ -30,7 +30,7 @@ const Form = () => {
   };
 
   const Addpost = async () => {
-    await Axios.post(url, Post).then((post) => console.log(post));
+    await Axios.post(url, Post);
   };
 
   const OnSubmit = (e) => {
