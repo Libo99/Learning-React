@@ -11,6 +11,7 @@ const Form = () => {
   const [text, setText] = useState("");
   const {REACT_APP_API_URL} = process.env;
   const url = REACT_APP_API_URL;
+  process.env.CI = false;
 
   const [loading, setLoading] = useState(true);
 
