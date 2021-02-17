@@ -1,6 +1,6 @@
 import React from 'react';
 import loading from '../assets/loading-kopi.gif'
-import '../Loading.css'
+import './Loading.css'
 
 
 const LoadingSpinner = () => {

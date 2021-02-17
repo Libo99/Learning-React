@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "../Form.css";
+import "./Form.css";
 import Axios from "axios";
 import List from "./List";
 import Loading from "./LoadingSpinner";
-
 
 const Form = () => {
   const [post, setPost] = useState([]);
@@ -31,8 +30,8 @@ const Form = () => {
 
   const Addpost = async () => {
     await Axios.post(url, Post)
-    .then((post) => console.log(post.data))
-    .catch(err => console.log(err));
+      .then((post) => console.log(post.data))
+      .catch((err) => console.log(err));
   };
 
   const OnSubmit = (e) => {
