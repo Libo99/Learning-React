@@ -9,7 +9,6 @@ const Form = () => {
   const [post, setPost] = useState([]);
   const [name, setName] = useState("");
   const [text, setText] = useState("");
-  // const { REACT_APP_API_URL } = process.env;
   const url = process.env.REACT_APP_API_URL;
 
   const [loading, setLoading] = useState(true);
@@ -22,6 +21,7 @@ const Form = () => {
   };
   useEffect(() => {
     fetchApi();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const Post = {
@@ -30,7 +30,8 @@ const Form = () => {
   };
 
   const Addpost = async () => {
-    await Axios.post(url, Post).then((post) => console.log(post.data));
+    await Axios.post(url, Post)
+    .then((post) => console.log(post.data));
   };
 
   const OnSubmit = (e) => {
