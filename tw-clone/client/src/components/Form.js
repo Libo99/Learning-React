@@ -31,7 +31,8 @@ const Form = () => {
 
   const Addpost = async () => {
     await Axios.post(url, Post)
-    .then((post) => console.log(post.data));
+    .then((post) => console.log(post.data))
+    .catch(err => console.log(err));
   };
 
   const OnSubmit = (e) => {
