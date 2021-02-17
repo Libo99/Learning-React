@@ -36,13 +36,13 @@ const Form = () => {
     .catch(err => console.log(err));
   };
 
-  const OnSubmit = (e) => {
+  const OnSubmit = async (e) => {
     e.preventDefault();
     Addpost();
     setName("");
     setText("");
     setLoading(true);
-    setTimeout(() => {
+    await setTimeout(() => {
       fetchApi();
     }, 500);
   };
