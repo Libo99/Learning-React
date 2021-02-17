@@ -3,7 +3,7 @@ import "../Form.css";
 import Axios from "axios";
 import List from "./List";
 import Loading from "./LoadingSpinner";
-require("dotenv").config();
+
 
 const Form = () => {
   const [post, setPost] = useState([]);
