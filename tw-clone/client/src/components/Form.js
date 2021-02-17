@@ -9,8 +9,7 @@ const Form = () => {
   const [post, setPost] = useState([]);
   const [name, setName] = useState("");
   const [text, setText] = useState("");
-  const {REACT_APP_API_URL} = process.env;
-  const url = REACT_APP_API_URL;
+  const url = "https://obscure-retreat-25663.herokuapp.com/posts";
 
   const [loading, setLoading] = useState(true);
 
@@ -36,13 +35,13 @@ const Form = () => {
     .catch(err => console.log(err));
   };
 
-  const OnSubmit = async (e) => {
+  const OnSubmit = (e) => {
     e.preventDefault();
     Addpost();
     setName("");
     setText("");
     setLoading(true);
-    await setTimeout(() => {
+    setTimeout(() => {
       fetchApi();
     }, 500);
   };
