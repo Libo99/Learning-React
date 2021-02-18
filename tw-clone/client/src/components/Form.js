@@ -26,6 +26,7 @@ const Form = () => {
   const Post = {
     name: name,
     text: text,
+    created: new Date()
   };
 
   const Addpost = async () => {
